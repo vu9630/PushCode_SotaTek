@@ -1,0 +1,58 @@
+<h4 style="text-align: center">To Do list</h4>
+<div class="container">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="search..." />
+  </div>
+
+  <form [formGroup]>
+    <div class="form-group row">
+      <div class="btn-sum" (click)="checkDoHomeWork($event)">
+        <input type="checkbox" /> Do homework
+      </div>
+
+      <div class="btn-sum">
+        <button class="btn btn-info btn-1">Detail</button>
+        <button class="btn btn-danger btn-1">Remove</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Do homework" />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        class="form-control"
+        id="description"
+        rows="3"
+        placeholder="Lorem Ipsum..."
+      ></textarea>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputDate">Due date</label>
+        <input type="date" class="form-control" id="inputDate" />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPiority">Piority</label>
+        <select id="inputPiority" class="form-control">
+          <option>Low</option>
+          <option>Normal</option>
+          <option>High</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success col-md-12">Sign in</button>
+
+    <!-- <div class="form-group col-md-12">
+        <input type="checkbox" />Do homework
+        <button class="btn btn-info btn-1">Detail</button>
+        <button class="btn btn-danger btn-1">Remove</button>
+      </div>
+
+    -->
+  </form>
+</div>

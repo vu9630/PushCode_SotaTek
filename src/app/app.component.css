@@ -1,0 +1,20 @@
+.list-menuChild {
+  list-style-type: none;
+  background-color: rgb(85, 230, 85);
+  display: flex;
+  justify-content: center;
+  height: 45px;
+}
+
+.selected {
+  text-decoration: none;
+  margin: 10px 8px;
+  color: white;
+  line-height: 40px;
+  padding: 13px;
+}
+
+.selected:hover {
+  background-color: rgb(70, 146, 238);
+  border: 1px solid;
+}

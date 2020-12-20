@@ -1,0 +1,46 @@
+<h4 style="text-align: center">New Task</h4>
+
+<div class="container">
+  <form [formGroup]="profileForm">
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Add new task..."
+        formControlName="newTask"
+      />
+    </div>
+    <div
+      class="col alert alert-danger"
+      role="alert"
+      *ngIf="
+        profileForm.controls.newTask?.errors?.required &&
+        profileForm.controls.newTask?.touched
+      "
+    >
+      New task is required!
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" rows="3"></textarea>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputDate">Due date</label>
+        <input type="date" class="form-control" id="inputDate" />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPiority">Piority</label>
+        <select id="inputPiority" class="form-control">
+          <option>Low</option>
+          <option>Normal</option>
+          <option>High</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success col-md-12">Add</button>
+  </form>
+</div>
